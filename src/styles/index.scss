@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Proza+Libre:wght@400;700&display=swap');
+
+body{
+  font-family: 'Proza Libre', sans-serif;
+  font-size: 18px!important;
+  background: $very_dark_blue!important;
+  color: $very_light_gray;
+}
+
+.list-group-item{
+  border-bottom: 1px solid #35384D;
+}

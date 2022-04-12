@@ -1,6 +1,6 @@
 <template>
   <div
-  class="position-relative"
+  class="theme theme-dark position-relative"
   :style="{
     backgroundImage: 'url(' + require('@/assets/bg-desktop-dark.jpg') + ')',
     backgroundPosition: 'center',
@@ -24,7 +24,7 @@
 </template>
 
 <script>
-import { ref, provide } from 'vue';
+import { ref, provide, watchEffect } from 'vue';
 import TodoNav from './components/TodoNav.vue'
 import TodoForm from './components/TodoForm.vue'
 import TodoList from './components/TodoList.vue'

@@ -9,7 +9,7 @@
             :item="todo"
           />
           <TodoActions
-            v-if="todos.length > 0"
+            v-if="todosTodos.length > 0"
           />
         </ul>
       </div>
@@ -17,7 +17,7 @@
   </div>
 </template>
 <script>
-import { inject } from '@vue/runtime-core';
+import { inject, ref, computed, provide } from 'vue';
 import TodoItem from './TodoItem.vue';
 import TodoActions from './TodoActions.vue'
 
@@ -28,10 +28,27 @@ export default {
     TodoActions
   },
   setup() {
-    const todos = inject('todos');
+    const todosTodos = inject('todos');
+
+    const filter = ref('all');
+
+    const todos = computed(() => {
+      if(filter.value === 'all'){
+        return todosTodos.value;
+      }
+      if(filter.value === 'active'){
+        return todosTodos.value.filter(item => item.done !== true);
+      }
+      if(filter.value === 'completed'){
+        return todosTodos.value.filter(item => item.done !== false);
+      }
+    });
+    
+    provide('filter', filter);
 
     return{
-      todos
+      todos,
+      todosTodos
     }
   }
 }

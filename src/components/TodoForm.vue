@@ -4,14 +4,21 @@
       @submit.prevent="onSubmit"
       class="text-center"
     >
-      <input
-        class="form-control form-control-lg border-0 text-white mt-3"
-        type="text"
-        v-model.trim="newItem"
-        placeholder="Add new item"
-        name="newItem"
-        id="newItem"
-      >
+      <div class="position-relative">
+        <input
+          class="form-control form-control-lg border-0 text-white mt-3"
+          type="text"
+          v-model.trim="newItem"
+          placeholder="Add new item"
+          name="newItem"
+          id="newItem"
+        >
+        <button
+          class="position-absolute"
+          type="submit">
+            <svg fill="#ffffff" viewBox="0 0 50 50" width="25px" height="25px"><path d="M 21 3 C 11.601563 3 4 10.601563 4 20 C 4 29.398438 11.601563 37 21 37 C 24.355469 37 27.460938 36.015625 30.09375 34.34375 L 42.375 46.625 L 46.625 42.375 L 34.5 30.28125 C 36.679688 27.421875 38 23.878906 38 20 C 38 10.601563 30.398438 3 21 3 Z M 21 7 C 28.199219 7 34 12.800781 34 20 C 34 27.199219 28.199219 33 21 33 C 13.800781 33 8 27.199219 8 20 C 8 12.800781 13.800781 7 21 7 Z"/></svg>
+          </button>
+      </div>
       <label class="form-check-label text-secondary mt-1" for="newItem">(Press <i>enter</i> to <b>Save</b>)</label>
     </form>
   </div>
@@ -48,5 +55,12 @@ export default {
   input{
     background-color: $very_dark_desaturated_blue!important;
     box-shadow: 0px 0px 6px 0px hsl(235deg 21% 11%);
+  }
+  button{
+    right: 0;
+    top: 0;
+    height: 100%;
+    border: 0;
+    background: transparent;
   }
 </style>

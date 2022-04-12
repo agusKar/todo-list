@@ -5,6 +5,7 @@
       role="button"
       class="img_check"
       :class="{'itemDone': item.done}"
+      @click="changeStatus(item.id)"
       >
       <div>
         <img
@@ -18,6 +19,7 @@
     <div 
       class="img_cross float-right"
       role="button"
+      @click="deleteItem(item.id)"
     >
       <img
         src="@/assets/icon-cross.svg"
@@ -26,11 +28,32 @@
   </li>
 </template>
 <script>
+import { inject } from 'vue';
 export default {
   props: {
     item: {
       type: Object,
       require: true
+    }
+  },
+  setup() {
+    const todos = inject('todos');
+
+    const changeStatus = id => {
+      todos.value.map(item => {
+        if(item.id === id){
+          item.done = !item.done;
+        }
+      })
+    };
+
+    const deleteItem = id => {
+      todos.value = todos.value.filter(item => item.id != id);
+    };
+
+    return {
+      changeStatus,
+      deleteItem
     }
   }
 }

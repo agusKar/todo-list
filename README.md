@@ -1,5 +1,5 @@
 # todo-list
-Todo list app made with Vue, Sass, Bootstrap and Composition API
+Todo list app made with Vue, Sass, Bootstrap and Composition API. Deploy on Netlify
 
 https://todolist-kar.netlify.app/
 

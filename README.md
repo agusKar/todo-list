@@ -1,6 +1,8 @@
 # todo-list
 Todo list app made with Vue, Sass, Bootstrap and Composition API
 
+https://todolist-kar.netlify.app/
+
 ## Project setup
 ```
 npm install

@@ -3,10 +3,38 @@
 body{
   font-family: 'Proza Libre', sans-serif;
   font-size: 18px!important;
-  background: $very_dark_blue!important;
-  color: $very_light_gray;
+  --bg-primary: #{$bg_primary_light};
+  --bg-secondary: #{$bg_secondary_light};
+  --text-primary: #{$text_primary_dark};
+  --text-secondary: #{$text_secondary_dark};
+  --text-gray: #{$text_gray};
+  --text-white: #{$text_light};
+  --text-dark: #{$text_dark};
+  
+  --text-invert: #{$text_light};
+
+  background: var(--bg-secondary)!important;
+  color: var(--text-primary);
+  
+  &.theme-dark{
+    --bg-primary: #{$bg_primary_dark};
+    --bg-secondary: #{$bg_secondary_dark};
+    --text-primary: #{$text_primary_light};
+    --text-secondary: #{$text_secondary_light};
+    --text-invert: #{$text_dark};
+    background: var(--bg-secondary)!important;
+    color: var(--text-primary);
+  }
+  
+  &.theme-rainbow{
+    min-height:100%;
+    color: var(--text-primary);
+    background:
+      linear-gradient(rgba(255,0,0,1) 0%, rgba(255,154,0,1) 10%, rgba(208,222,33,1) 20%, rgba(79,220,74,1) 30%, rgba(63,218,216,1) 40%, rgba(47,201,226,1) 50%, rgba(28,127,238,1) 60%, rgba(95,21,242,1) 70%, rgba(186,12,248,1) 80%, rgba(251,7,217,1) 90%, rgba(255,0,0,1) 100%) 0 0/100% 200% !important;
+      animation: rainbow 2s linear infinite;
+    }
 }
 
 .list-group-item{
-  border-bottom: 1px solid #35384D;
+  border-bottom: 1px solid var(--bg-secondary);
 }

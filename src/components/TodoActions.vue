@@ -56,18 +56,18 @@ export default {
 
 <style scoped lang="scss">
   .list-item-dark{
-    background-color: $very_dark_desaturated_blue!important;
-    color: $light_grayish_blue;
+    background-color: var(--bg-primary)!important;
+    color: var(--text-primary);
     font-size: 0.9rem;
-    color: $dark_grayish_blue;
+    color: var(--text-primary);
 
     span{
       margin-right: 0.6rem;
       text-decoration: none;
-      color: $dark_grayish_blue;
+      color: var(--text-gray);
 
       &[role="button"]:hover{
-        color: $light_grayish_blue;
+        color: var(--text-primary);
       }
       &.active{
         font-weight: bold;

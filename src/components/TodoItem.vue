@@ -61,8 +61,8 @@ export default {
 
 <style scoped lang="scss">
   .list-item-dark{
-    background-color: $very_dark_desaturated_blue!important;
-    color: $light_grayish_blue;
+    background-color: var(--bg-primary)!important;
+    color: var(--text-primary);
   }
   .img_check{
     display: flex;
@@ -79,10 +79,10 @@ export default {
       display: flex;
       justify-content: center;
       align-items: center;
-      border: 2px solid $very_dark_grayish_blue;
+      border: 2px solid var(--bg-secondary);
       flex: none;
       &:hover{        
-        background: linear-gradient($very_dark_desaturated_blue, $very_dark_desaturated_blue) padding-box, linear-gradient(to right, hsl(192, 100%, 67%), hsl(280, 87%, 65%)) border-box;
+        background: linear-gradient(var(--bg-primary), var(--bg-primary)) padding-box, linear-gradient(to right, hsl(192, 100%, 67%), hsl(280, 87%, 65%)) border-box;
         border: 2px solid transparent;
       }
       img{
@@ -96,7 +96,7 @@ export default {
     }
     span{
       text-decoration: line-through;
-      color: $dark_grayish_blue;
+      color: var(--text-gray);
     }
   }
   .img_cross{

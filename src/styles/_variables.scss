@@ -1,16 +1,17 @@
 $gradient: linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%));
-// light Theme
 
-$very_light_gray: hsl(0, 0%, 98%);
-$very_light_grayish_blue: hsl(236, 33%, 92%);
-$light_grayish_blue: hsl(233, 11%, 84%);
-$dark_grayish_blue: hsl(236, 9%, 61%);
-$very_dark_grayish_blue: hsl(235, 19%, 35%);
+$text_gray: hsl(0, 0%, 57%);
+$text_light: hsl(0, 0%, 88%);
+$text_dark: hsl(235, 21%, 11%);
+
+// light Theme
+$bg_primary_light: hsl(0, 0%, 93%);
+$bg_secondary_light: hsl(0, 0%, 88%);
+$text_primary_dark: hsl(235, 24%, 19%);
+$text_secondary_dark: hsl(235, 21%, 11%);
 
 // dark Theme
-
-$very_dark_blue: hsl(235, 21%, 11%);
-$very_dark_desaturated_blue: hsl(235, 24%, 19%);
-$dark_grayish_blue: hsl(234, 11%, 52%);
-$very_dark_grayish_blue: hsl(233, 14%, 35%);
-$very_dark_grayish_blue: hsl(237, 14%, 26%);
+$bg_primary_dark: hsl(235, 24%, 19%);
+$bg_secondary_dark: hsl(235, 21%, 11%);
+$text_primary_light: hsl(0, 0%, 93%);
+$text_secondary_light: hsl(0, 0%, 88%);

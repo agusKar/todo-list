@@ -56,6 +56,7 @@ export default {
 
 <style lang="scss">
   .list-group{
-    box-shadow: 0px 10px 5px $very_dark_blue;
+    border-radius: 20px!important;
+    box-shadow: 0px 10px 16px 2px #0000002b;
   }
 </style>
